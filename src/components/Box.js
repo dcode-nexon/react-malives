@@ -7,12 +7,8 @@ const BoxWrap = styled.article`
 	background-color: ${(props) => props.bg || 'gray'};
 `;
 
-function Box({ children, wid, ht, bg }) {
-	return (
-		<BoxWrap wid={wid} ht={ht} bg={bg}>
-			{children}
-		</BoxWrap>
-	);
+function Box({ children, ...props }) {
+	return <BoxWrap {...props}>{children}</BoxWrap>;
 }
 
 export default Box;

@@ -1,10 +1,24 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 const BoxWrap = styled.article`
 	float: left;
-	height: ${(props) => props.ht || '260px'};
-	width: ${(props) => props.wid || '20%'};
 	background-color: ${(props) => props.bg || 'gray'};
+	width: 20%;
+	height: 260px;
+
+	${(props) =>
+		props.type === 'A' &&
+		css`
+			width: 60%;
+			height: 520px;
+		`}
+
+	${(props) =>
+		props.type === 'B' &&
+		css`
+			width: 40%;
+			height: 260px;
+		`}
 `;
 
 function Box({ children, ...props }) {

@@ -1,4 +1,5 @@
-import styled from 'styled-components';
+import styled, { ThemeProvider } from 'styled-components';
+import size from '../DeviceSize';
 
 const HeaderWrap = styled.header`
 	position: fixed;
@@ -7,10 +8,20 @@ const HeaderWrap = styled.header`
 	background: #fff;
 	top: 0;
 	left: 0;
+
+	@media screen and (max-width: ${({ theme }) => theme.web_b}) {
+		position: relative;
+		width: 100%;
+		height: 80px;
+	}
 `;
 
 function Header() {
-	return <HeaderWrap></HeaderWrap>;
+	return (
+		<ThemeProvider theme={size}>
+			<HeaderWrap></HeaderWrap>
+		</ThemeProvider>
+	);
 }
 
 export default Header;

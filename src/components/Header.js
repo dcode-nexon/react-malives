@@ -14,6 +14,15 @@ const HeaderWrap = styled.header`
 		width: 100%;
 		height: 80px;
 	}
+	@media screen and (max-width: ${({ theme }) => theme.mo_m}) {
+		height: 130px;
+	}
+	@media screen and (max-width: ${({ theme }) => theme.mo_s}) {
+		position: fixed;
+		height: 100%;
+		background-color: transparent;
+		z-index: 5;
+	}
 `;
 
 function Header() {

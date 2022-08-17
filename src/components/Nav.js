@@ -7,10 +7,14 @@ const NavWrap = styled.nav`
 	height: 35px;
 	background: #222;
 	margin-left: 15%;
+	transition: 0.5s;
 
 	@media screen and (max-width: ${({ theme }) => theme.web_b}) {
 		width: 100%;
 		margin-left: 0%;
+	}
+	@media screen and (max-width: ${({ theme }) => theme.mo_m}) {
+		display: none;
 	}
 `;
 

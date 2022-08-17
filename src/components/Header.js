@@ -8,6 +8,7 @@ const HeaderWrap = styled.header`
 	background: #fff;
 	top: 0;
 	left: 0;
+	transition: 0.5s;
 
 	@media screen and (max-width: ${({ theme }) => theme.web_b}) {
 		position: relative;

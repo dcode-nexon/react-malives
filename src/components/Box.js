@@ -5,6 +5,17 @@ const BoxWrap = styled.article`
 	background-color: ${(props) => props.bg || 'gray'};
 	width: 20%;
 	height: 260px;
+	transition: 0.5s;
+	animation: scale 1s 1;
+
+	@keyframes scale {
+		0% {
+			transform: scale(0);
+		}
+		100% {
+			transform: scale(1);
+		}
+	}
 
 	&:nth-of-type(1) {
 		width: 60%;

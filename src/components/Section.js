@@ -17,15 +17,15 @@ function Section() {
 	return (
 		<ThemeProvider theme={size}>
 			<SectionWrap>
-				<Box bg={'#ddd'} type={'A'}></Box>
-				<Box bg={'#ccc'} type={'B'}></Box>
+				<Box bg={'#ddd'}></Box>
+				<Box bg={'#ccc'}></Box>
 				<Box bg={'#bbb'}></Box>
 				<Box bg={'#aaa'}></Box>
 				<Box bg={'#999'}></Box>
-				<Box bg={'#888'} type={'B'}></Box>
+				<Box bg={'#888'}></Box>
 				<Box bg={'#777'}></Box>
 				<Box bg={'#666'}></Box>
-				<Box bg={'#555'} type={'B'}></Box>
+				<Box bg={'#555'}></Box>
 				<Box bg={'#444'}></Box>
 				<Box bg={'#333'}></Box>
 				<Box bg={'#222'}></Box>

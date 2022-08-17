@@ -5,7 +5,6 @@ const BoxWrap = styled.article`
 	height: ${(props) => props.ht || '260px'};
 	width: ${(props) => props.wid || '20%'};
 	background-color: ${(props) => props.bg || 'gray'};
-	border: 1px solid aqua;
 `;
 
 function Box({ children, wid, ht, bg }) {

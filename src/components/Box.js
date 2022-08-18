@@ -39,6 +39,30 @@ const BoxWrap = styled.article`
 				background-color: ${(props) => props.bg || '#fff'};
 				padding: 40px 30px;
 				transition: 1s;
+
+				svg {
+					font-size: 300px;
+					color: #b2effc;
+					opacity: 0;
+					position: absolute;
+					bottom: -70px;
+					right: -200px;
+					transition: 0.7s;
+				}
+
+				strong {
+					font-size: 30px;
+					font-weight: normal;
+					font-family: 'poiret one';
+					line-height: 1.6;
+					color: #888;
+					margin-bottom: 20px;
+					transition: 1s;
+				}
+				em {
+					font-size: 12px;
+					color: #999;
+				}
 			`}
 	}
 
@@ -130,7 +154,6 @@ const BoxWrap = styled.article`
 			width: 25%;
 		}
 	}
-
 	@media screen and (max-width: ${({ theme }) => theme.web_s}) {
 		&:nth-of-type(1) {
 			width: 100%;
@@ -170,7 +193,6 @@ const BoxWrap = styled.article`
 			display: none;
 		}
 	}
-
 	@media screen and (max-width: ${({ theme }) => theme.mo_b}) {
 		&:nth-of-type(2) {
 			width: 100%;
@@ -198,13 +220,11 @@ const BoxWrap = styled.article`
 			display: block;
 		}
 	}
-
 	@media screen and (max-width: ${({ theme }) => theme.mo_m}) {
 		&:nth-of-type(1) {
 			height: 300px;
 		}
 	}
-
 	@media screen and (max-width: ${({ theme }) => theme.mo_s}) {
 		display: none;
 		&:nth-of-type(1) {

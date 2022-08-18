@@ -1,5 +1,4 @@
 import styled, { ThemeProvider } from 'styled-components';
-import size from '../DeviceSize';
 
 const utilImgs = [
 	process.env.PUBLIC_URL + '/img/util1.png',
@@ -45,15 +44,13 @@ const NavWrap = styled.nav`
 
 function Nav() {
 	return (
-		<ThemeProvider theme={size}>
-			<NavWrap>
-				{utilImgs.map((item) => (
-					<a href='#' key={item}>
-						<img src={item} alt={item} />
-					</a>
-				))}
-			</NavWrap>
-		</ThemeProvider>
+		<NavWrap>
+			{utilImgs.map((item) => (
+				<a href='#' key={item}>
+					<img src={item} alt={item} />
+				</a>
+			))}
+		</NavWrap>
 	);
 }
 

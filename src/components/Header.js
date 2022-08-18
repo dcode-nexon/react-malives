@@ -4,7 +4,6 @@ import { faHeader } from '@fortawesome/free-solid-svg-icons';
 import { faBuilding } from '@fortawesome/free-solid-svg-icons';
 import { faBriefcase } from '@fortawesome/free-solid-svg-icons';
 import { faUtensils } from '@fortawesome/free-solid-svg-icons';
-import size from '../DeviceSize';
 
 const logoImg = {
 	logo1: process.env.PUBLIC_URL + '/img/logo1.png',
@@ -92,7 +91,7 @@ const Gnb = styled.ul`
 	a {
 		display: block;
 		padding: 8px 30px;
-		font: 17px/1.8 'poiret one';
+		font: bold 17px/1.8 'poiret one';
 		color: #555;
 		text-align: left;
 		transition: 0.5s;
@@ -186,29 +185,27 @@ const Sns = styled.ul`
 
 function Header() {
 	return (
-		<ThemeProvider theme={size}>
-			<HeaderWrap>
-				<Logo img={logoImg}>Logo</Logo>
-				<Gnb>
-					{menuItem.map((item) => (
-						<li key={item.name}>
-							<a href='#'>
-								<FontAwesomeIcon icon={item.ico} />
-								{item.name}
-							</a>
-						</li>
-					))}
-				</Gnb>
-
-				<Sns>
-					{snsImgs.map((item) => (
-						<a href='#' key={item}>
-							<img src={item} alt={item} />
+		<HeaderWrap>
+			<Logo img={logoImg}>Logo</Logo>
+			<Gnb>
+				{menuItem.map((item) => (
+					<li key={item.name}>
+						<a href='#'>
+							<FontAwesomeIcon icon={item.ico} />
+							{item.name}
 						</a>
-					))}
-				</Sns>
-			</HeaderWrap>
-		</ThemeProvider>
+					</li>
+				))}
+			</Gnb>
+
+			<Sns>
+				{snsImgs.map((item) => (
+					<a href='#' key={item}>
+						<img src={item} alt={item} />
+					</a>
+				))}
+			</Sns>
+		</HeaderWrap>
 	);
 }
 

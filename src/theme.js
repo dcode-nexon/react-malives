@@ -7,4 +7,4 @@ const deviceSize = {
 	mo_s: '479px',
 };
 
-export default deviceSize;
+export { deviceSize };

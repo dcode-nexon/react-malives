@@ -13,6 +13,9 @@ const GlobalStyle = createGlobalStyle`
   img {
     border: 0;
   }  
+  body {
+    
+  }
 `;
 
 export default GlobalStyle;

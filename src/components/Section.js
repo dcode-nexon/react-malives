@@ -1,5 +1,5 @@
 import styled, { ThemeProvider, css } from 'styled-components';
-import size from '../DeviceSize';
+
 import Box from './Box';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
@@ -30,98 +30,98 @@ const SectionWrap = styled.section`
 
 function Section() {
 	return (
-		<ThemeProvider theme={size}>
-			<SectionWrap>
-				<Box type={'bg'} bg={bgs[0]}>
-					<div>
-						<span>Maldives</span>
-					</div>
-				</Box>
-				<Box type={'txt'}>
-					<div>
-						<FontAwesomeIcon icon={faArrowRight} />
-						<p>
-							<strong>A Whole New World</strong>
-							<em>
-								Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam maiores laborum
-								numquam cum similique perspiciatis quasi repellat odio dolores enim?
-							</em>
-						</p>
-					</div>
-				</Box>
-				<Box type={'txt'} bg={'#bff7fa'}>
-					<div>
-						<FontAwesomeIcon icon={faRotate} />
-						<p>
-							<strong>Reservation</strong>
-						</p>
-					</div>
-				</Box>
-				<Box type={'bg'} bg={bgs[1]}>
-					<div>
-						<span>Suite</span>
-					</div>
-				</Box>
-				<Box type={'bg'} bg={bgs[2]}>
-					<div className='bg bg3'>
-						<span>Surf</span>
-					</div>
-				</Box>
-				<Box type={'txt'}>
-					<div>
-						<FontAwesomeIcon icon={faArrowRight} />
-						<p>
-							<strong>A Dazzling Place</strong>
-							<em>
-								Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum assumenda veritatis
-								ipsa perferendis totam? Animi.
-							</em>
-						</p>
-					</div>
-				</Box>
-				<Box type={'bg'} bg={bgs[3]}>
-					<div>
-						<span>Sauna</span>
-					</div>
-				</Box>
-				<Box type={'txt'}>
-					<div>
-						<FontAwesomeIcon icon={faArrowRight} />
-						<strong>Hot Spop</strong>
+		<SectionWrap>
+			<Box type={'bg'} bg={bgs[0]}>
+				<div>
+					<span>Maldives</span>
+				</div>
+			</Box>
+			<Box type={'txt'}>
+				<div>
+					<FontAwesomeIcon icon={faArrowRight} />
+					<p>
+						<strong>A Whole New World</strong>
 						<br />
 						<em>
-							a best place to have a vacation
-							<br /> Tell me when you
+							Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam maiores laborum
+							numquam cum similique perspiciatis quasi repellat odio dolores enim?
 						</em>
-					</div>
-				</Box>
-				<Box type={'bg'} bg={bgs[4]}>
-					<div>
-						<span>Diner</span>
-					</div>
-				</Box>
-				<Box type={'bg'} bg={bgs[5]}>
-					<div>
-						<span>Spa</span>
-					</div>
-				</Box>
-				<Box type={'txt'} bg={'#e3f1fb'}>
-					<div>
-						<FontAwesomeIcon icon={faArrowRight} />
-						<p>
-							<strong>Open Space</strong>
-							<br />
-							<em>I can show you the world</em>
-						</p>
-					</div>
-				</Box>
-				<Box type={'bg'} bg={bgs[6]}>
-					<div>
-						<span>Tour</span>
-					</div>
-				</Box>
-			</SectionWrap>
-		</ThemeProvider>
+					</p>
+				</div>
+			</Box>
+			<Box type={'txt'} bg={'#bff7fa'}>
+				<div>
+					<FontAwesomeIcon icon={faRotate} />
+					<p>
+						<strong>Reservation</strong>
+					</p>
+				</div>
+			</Box>
+			<Box type={'bg'} bg={bgs[1]}>
+				<div>
+					<span>Suite</span>
+				</div>
+			</Box>
+			<Box type={'bg'} bg={bgs[2]}>
+				<div className='bg bg3'>
+					<span>Surf</span>
+				</div>
+			</Box>
+			<Box type={'txt'}>
+				<div>
+					<FontAwesomeIcon icon={faArrowRight} />
+					<p>
+						<strong>A Dazzling Place</strong>
+						<br />
+						<em>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum assumenda veritatis
+							ipsa perferendis totam? Animi.
+						</em>
+					</p>
+				</div>
+			</Box>
+			<Box type={'bg'} bg={bgs[3]}>
+				<div>
+					<span>Sauna</span>
+				</div>
+			</Box>
+			<Box type={'txt'}>
+				<div>
+					<FontAwesomeIcon icon={faArrowRight} />
+					<strong>Hot Spop</strong>
+					<br />
+					<em>
+						a best place to have a vacation
+						<br /> Tell me when you
+					</em>
+				</div>
+			</Box>
+			<Box type={'bg'} bg={bgs[4]}>
+				<div>
+					<span>Diner</span>
+				</div>
+			</Box>
+			<Box type={'bg'} bg={bgs[5]}>
+				<div>
+					<span>Spa</span>
+				</div>
+			</Box>
+			<Box type={'txt'} bg={'#e3f1fb'}>
+				<div>
+					<FontAwesomeIcon icon={faArrowRight} />
+					<p>
+						<strong>Open Space</strong>
+						<br />
+						<em>I can show you the world</em>
+					</p>
+				</div>
+			</Box>
+			<Box type={'bg'} bg={bgs[6]}>
+				<div>
+					<span>Tour</span>
+				</div>
+			</Box>
+		</SectionWrap>
 	);
 }
 

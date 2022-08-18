@@ -125,11 +125,17 @@ const Gnb = styled.ul`
 		}
 	}
 	@media screen and (max-width: ${({ theme }) => theme.mo_m}) {
-		width: 25%;
+		width: 100%;
+		height: 40px;
+		top: 80px;
+		right: 0px;
 
-		li a {
-			padding: 4px;
-			text-align: center;
+		li {
+			width: 25%;
+			a {
+				padding: 4px;
+				text-align: center;
+			}
 		}
 	}
 	@media screen and (max-width: ${({ theme }) => theme.mo_s}) {

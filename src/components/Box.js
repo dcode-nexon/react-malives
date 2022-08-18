@@ -69,9 +69,11 @@ const BoxWrap = styled.article`
 					bottom: -70px;
 					right: -200px;
 					transition: 0.7s;
+					z-index: 0;
 				}
 
-				strong {
+				strong,
+				p {
 					font-size: 30px;
 					font-weight: normal;
 					font-family: 'poiret one';
@@ -79,6 +81,8 @@ const BoxWrap = styled.article`
 					color: #888;
 					margin-bottom: 20px;
 					transition: 1s;
+					position: relative;
+					z-index: 2;
 				}
 				em {
 					font-size: 12px;
@@ -99,7 +103,21 @@ const BoxWrap = styled.article`
 					}
 				`}
 
-			${(props) => props.type === 'txt' && css``}
+			${(props) =>
+				props.type === 'txt' &&
+				css`
+					background: #6ce2fb;
+					color: #fff;
+
+					svg {
+						right: 0;
+						opacity: 0.8;
+					}
+					strong,
+					em {
+						color: #fff;
+					}
+				`}
 		}
 	}
 
@@ -115,6 +133,19 @@ const BoxWrap = styled.article`
 	&:nth-of-type(3) {
 		width: 20%;
 		background: #bbb;
+
+		svg {
+			animation: ani linear 3s infinite;
+		}
+
+		@keyframes ani {
+			0% {
+				transform: rotate(0deg);
+			}
+			100% {
+				transform: rotate(360deg);
+			}
+		}
 	}
 	&:nth-of-type(4) {
 		width: 20%;

@@ -53,7 +53,7 @@ const Logo = styled.h1`
 	height: 136px;
 	background-image: url(${(props) => props.img.logo1});
 	background-repeat: no-repeat;
-	background-position: 0 0;
+	background-position: center;
 	background-size: contain;
 	position: absolute;
 	top: 70px;
@@ -76,10 +76,11 @@ const Logo = styled.h1`
 		margin: 0 auto;
 	}
 	@media screen and (max-width: ${({ theme }) => theme.mo_s}) {
-		width: 140px;
-		height: 90px;
+		width: 200px;
+		height: 140px;
 		left: 50%;
-		margin-left: -70px;
+		top: 100px;
+		margin-left: -100px;
 		background-image: url(${(props) => props.img.logo1});
 	}
 `;
@@ -139,7 +140,7 @@ const Gnb = styled.ul`
 	}
 	@media screen and (max-width: ${({ theme }) => theme.mo_s}) {
 		width: 250px;
-		top: 140px;
+		top: 350px;
 		right: 50%;
 		margin-right: -125px;
 

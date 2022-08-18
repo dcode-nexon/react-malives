@@ -33,7 +33,7 @@ function Section() {
 		<SectionWrap>
 			<Box type={'bg'} bg={bgs[0]}>
 				<div>
-					<span>Maldives</span>
+					<h1>Maldives</h1>
 				</div>
 			</Box>
 			<Box type={'txt'}>

@@ -23,6 +23,15 @@ const BoxWrap = styled.article`
 		height: 100%;
 		overflow: hidden;
 		cursor: pointer;
+		position: relative;
+
+		h1 {
+			font: 12vw/1 'Poiret one';
+			color: #fff;
+			position: absolute;
+			bottom: -1.5vw;
+			right: 0;
+		}
 
 		${(props) =>
 			props.type === 'bg' &&
@@ -30,6 +39,18 @@ const BoxWrap = styled.article`
 				background-image: url(${(props) => props.bg});
 				background-size: cover;
 				background-position: center;
+
+				span {
+					font-size: 60px;
+					color: #fff;
+					position: absolute;
+					bottom: 0;
+					right: 20px;
+					transform: scale(10);
+					opacity: 0;
+					transition: 0.4s;
+					font-family: 'Poiret One';
+				}
 			`}
 
 		${(props) =>
@@ -64,6 +85,22 @@ const BoxWrap = styled.article`
 					color: #999;
 				}
 			`}
+	}
+
+	//hover motion
+	&:hover {
+		> div {
+			${(props) =>
+				props.type === 'bg' &&
+				css`
+					span {
+						opacity: 1;
+						transform: scale(1);
+					}
+				`}
+
+			${(props) => props.type === 'txt' && css``}
+		}
 	}
 
 	&:nth-of-type(1) {
@@ -119,6 +156,10 @@ const BoxWrap = styled.article`
 	@media screen and (max-width: ${({ theme }) => theme.web_m}) {
 		&:nth-of-type(1) {
 			width: 75%;
+			> div h1 {
+				font-size: 16vw;
+				bottom: -2vw;
+			}
 		}
 		&:nth-of-type(2) {
 			width: 25%;
@@ -158,6 +199,10 @@ const BoxWrap = styled.article`
 		&:nth-of-type(1) {
 			width: 100%;
 			height: 400px;
+			> div h1 {
+				font-size: 20vw;
+				bottom: -2.5vw;
+			}
 		}
 		&:nth-of-type(2) {
 			width: 66.6666%;
@@ -232,6 +277,10 @@ const BoxWrap = styled.article`
 			position: fixed;
 			width: 100%;
 			height: 100%;
+
+			> div h1 {
+				font-size: 24vw;
+			}
 		}
 		&:nth-of-type(12) {
 			display: none;

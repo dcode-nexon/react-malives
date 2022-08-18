@@ -105,7 +105,7 @@ function Section() {
 						<span>Spa</span>
 					</div>
 				</Box>
-				<Box type={'txt'}>
+				<Box type={'txt'} bg={'#e3f1fb'}>
 					<div>
 						<FontAwesomeIcon icon={faArrowRight} />
 						<p>

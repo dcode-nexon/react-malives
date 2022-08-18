@@ -17,6 +17,24 @@ const BoxWrap = styled.article`
 		}
 	}
 
+	> div {
+		${(props) =>
+			props.type === 'bg' &&
+			css`
+				background-size: cover;
+				background-position: center;
+			`}
+
+		${(props) =>
+			props.type === 'txt' &&
+			css`
+				color: #666;
+				background-color: #fff;
+				padding: 40px 30px;
+				transition: 1s;
+			`}
+	}
+
 	&:nth-of-type(1) {
 		width: 60%;
 		height: 520px;

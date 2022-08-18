@@ -18,9 +18,16 @@ const BoxWrap = styled.article`
 	}
 
 	> div {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+		cursor: pointer;
+
 		${(props) =>
 			props.type === 'bg' &&
 			css`
+				background-image: url(${(props) => props.bg});
 				background-size: cover;
 				background-position: center;
 			`}
@@ -29,7 +36,7 @@ const BoxWrap = styled.article`
 			props.type === 'txt' &&
 			css`
 				color: #666;
-				background-color: #fff;
+				background-color: ${(props) => props.bg || '#fff'};
 				padding: 40px 30px;
 				transition: 1s;
 			`}
@@ -205,6 +212,9 @@ const BoxWrap = styled.article`
 			position: fixed;
 			width: 100%;
 			height: 100%;
+		}
+		&:nth-of-type(12) {
+			display: none;
 		}
 	}
 `;

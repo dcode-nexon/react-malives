@@ -5,6 +5,18 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { faRotate } from '@fortawesome/free-solid-svg-icons';
 
+const path = process.env.PUBLIC_URL;
+
+const bgs = [
+	path + '/img/pic1.jpg',
+	path + '/img/pic2.jpg',
+	path + '/img/pic3.jpg',
+	path + '/img/pic4.jpg',
+	path + '/img/pic5.jpg',
+	path + '/img/pic6.jpg',
+	path + '/img/pic7.jpg',
+];
+
 const SectionWrap = styled.section`
 	width: 85%;
 	position: relative;
@@ -20,7 +32,7 @@ function Section() {
 	return (
 		<ThemeProvider theme={size}>
 			<SectionWrap>
-				<Box type={'bg'}>
+				<Box type={'bg'} bg={bgs[0]}>
 					<div>
 						<span>Maldives</span>
 					</div>
@@ -37,7 +49,7 @@ function Section() {
 						</p>
 					</div>
 				</Box>
-				<Box type={'txt'}>
+				<Box type={'txt'} bg={'#bff7fa'}>
 					<div>
 						<FontAwesomeIcon icon={faRotate} />
 						<p>
@@ -45,12 +57,12 @@ function Section() {
 						</p>
 					</div>
 				</Box>
-				<Box type={'bg'}>
+				<Box type={'bg'} bg={bgs[1]}>
 					<div>
 						<span>Suite</span>
 					</div>
 				</Box>
-				<Box type={'bg'}>
+				<Box type={'bg'} bg={bgs[2]}>
 					<div className='bg bg3'>
 						<span>Surf</span>
 					</div>
@@ -67,7 +79,7 @@ function Section() {
 						</p>
 					</div>
 				</Box>
-				<Box type={'bg'}>
+				<Box type={'bg'} bg={bgs[3]}>
 					<div>
 						<span>Sauna</span>
 					</div>
@@ -83,12 +95,12 @@ function Section() {
 						</em>
 					</div>
 				</Box>
-				<Box type={'bg'}>
+				<Box type={'bg'} bg={bgs[4]}>
 					<div>
 						<span>Diner</span>
 					</div>
 				</Box>
-				<Box type={'bg'}>
+				<Box type={'bg'} bg={bgs[5]}>
 					<div>
 						<span>Spa</span>
 					</div>
@@ -103,7 +115,7 @@ function Section() {
 						</p>
 					</div>
 				</Box>
-				<Box type={'bg'}>
+				<Box type={'bg'} bg={bgs[6]}>
 					<div>
 						<span>Tour</span>
 					</div>
